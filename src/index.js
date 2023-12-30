@@ -14,4 +14,4 @@ import './js/movieModal/addButtons/addToQueue.js';
 import './js/movieModal/removeBtn.js';
 
 import './js/creditsModal/creditsModal.js';
-import './js/dark-theme.js';
+import './js/dark-theme/dark-theme.js';
