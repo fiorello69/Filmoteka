@@ -160,15 +160,29 @@
 }
 .dark-theme {
   background-color: #333;
-  .movie-card {
-    background-color: #333;
-  }
-  .movie-card h2 {
-    color: antiquewhite;
-  }
-  .movie-card:hover {
+}
+
+.dark-theme .movie-card {
+  background-color: #333;
+}
+
+.dark-theme .movie-card h2 {
+  color: antiquewhite;
+}
+
+.dark-theme .movie-card:hover {
   box-shadow: 10px 10px 5px 0px #c5a1a0;
   transition: transform ease 0.5s, box-shadow ease 0.5s;
   transform: translateY(-3px);
 }
+.dark-theme .buttons-left .home-btn {
+  background-color: #333;
+  color: antiquewhite;
+}
+.dark-theme .local-error {
+  color: antiquewhite;
+}
+.dark-theme .buttons-left .library-btn {
+  background-color: #333;
+  color: antiquewhite;
 }

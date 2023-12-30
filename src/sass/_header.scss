@@ -446,10 +446,10 @@ body:has(.switch__input:checked) {
 	z-index: 1;
 }
 .switch__input:checked {
-	background-color: hsl(290,90%,40%);
+	background-color: hsl(289, 10%, 21%);
 }
 .switch__input:checked:before {
-	background-color: hsl(220,90%,40%);
+	background-color: hsl(52, 90%, 40%);
 }
 .switch__input:checked:after {
 	background-color: hsl(0,0%,0%);
