@@ -1,8 +1,9 @@
 .global-header {
   height: fit-content;
   border-radius: 10px;
-  background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
+  
   animation: backgroundChanger 20s ease-in-out infinite;
 }
 

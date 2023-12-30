@@ -94,6 +94,14 @@
     transform: rotate(360deg);
   }
 }
+#toggle-button {
+  width: 60px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+} 
+
 
 @media screen and (min-width: 768px) {
   #movies-list {
@@ -108,6 +116,12 @@
   .loader {
     font-size: 25px;
   }
+  #toggle-button {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
 }
 
 /* DESKTOP VERSION*/
@@ -137,4 +151,24 @@
   .loader {
     font-size: 35px;
   }
+  #toggle-button {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+}
+.dark-theme {
+  background-color: #333;
+  .movie-card {
+    background-color: #333;
+  }
+  .movie-card h2 {
+    color: antiquewhite;
+  }
+  .movie-card:hover {
+  box-shadow: 10px 10px 5px 0px #c5a1a0;
+  transition: transform ease 0.5s, box-shadow ease 0.5s;
+  transform: translateY(-3px);
+}
 }
