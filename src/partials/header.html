@@ -1,0 +1,44 @@
+<header>
+  <div class="container global-header red-bg">
+    <div class="left-navigation">
+      <form class="search-form">
+        <input
+          type="text"
+          class="search-input"
+          name="search"
+          placeholder="Movie Search..."
+          autocomplete="off"
+        />
+        <button class="submit-btn" type="submit">
+          <svg>
+            <use href="./images/icons/icons.svg#icon-search"></use>
+          </svg>
+        </button>
+      </form>
+      <div class="buttons-left">
+        <a href="index.html">
+          <button type="button" class="home-btn" disabled>Home</button></a
+        >
+        <button type="button" class="library-btn">My Library</button>
+      </div>
+    </div>
+
+    <div class="logo">
+      <a href="index.html" class="logo">
+        <svg class="logo-icon">
+          <use href="./images/icons/icons.svg#icon-logo"></use>
+        </svg>
+        <span class="logo-text">Filmoteka</span>
+      </a>
+    </div>
+
+    <div class="buttons-right isHidden">
+      <button type="button" class="watched-tab-btn" disabled>Watched</button>
+      <button type="button" class="queue-tab-btn">queue</button>
+    </div>
+
+    <p class="search-error isHidden">
+      Search result not successful. Enter the correct movie name
+    </p>
+  </div>
+</header>

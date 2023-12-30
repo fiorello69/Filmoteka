@@ -1,0 +1,148 @@
+#modal-container {
+  position: fixed;
+  display: table;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  z-index: 1;
+  &.isOpen {
+    transform: scaleY(0.01) scaleX(0);
+    animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    .modal-background {
+      .modal {
+        transform: scale(0);
+        animation: zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+      }
+    }
+    &.isClose {
+      transform: scale(1);
+      animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+      .modal-background {
+        .modal {
+          animation: zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+        }
+      }
+    }
+  }
+
+  .modal-background {
+    display: table-cell;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    vertical-align: middle;
+    .modal {
+      height: 550px;
+      width: 320px;
+      color: #fff;
+      font-size: 12px;
+      background: #111;
+      border: 1px solid white;
+      border-radius: 10px;
+      font-style: italic;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      text-align: center;
+
+      .typewriter p {
+        font-size: 40px;
+        font-style: normal;
+      }
+
+      .typewriter span {
+        font-size: 45px;
+      }
+
+      .typewriter b {
+        color: #b92f2c;
+      }
+    }
+  }
+}
+
+@keyframes unfoldIn {
+  0% {
+    transform: scaleY(0.005) scaleX(0);
+  }
+  50% {
+    transform: scaleY(0.005) scaleX(1);
+  }
+  100% {
+    transform: scaleY(1) scaleX(1);
+  }
+}
+
+@keyframes unfoldOut {
+  0% {
+    transform: scaleY(1) scaleX(1);
+  }
+  50% {
+    transform: scaleY(0.005) scaleX(1);
+  }
+  100% {
+    transform: scaleY(0.005) scaleX(0);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+/* TABLET */
+@media screen and (min-width: 768px) {
+  #modal-container {
+    .modal-background {
+      .modal {
+        height: 300px;
+        width: 550px;
+        font-size: 14px;
+
+        .typewriter p {
+          font-size: 45px;
+        }
+
+        .typewriter span {
+          font-size: 55px;
+        }
+      }
+    }
+  }
+}
+
+/* DESKTOP VERSION*/
+@media screen and (min-width: 1280px) {
+  #modal-container {
+    .modal-background {
+      .modal {
+        height: 350px;
+        width: 750px;
+        font-size: 20px;
+
+        .typewriter p {
+          font-size: 55px;
+        }
+
+        .typewriter span {
+          font-size: 80px;
+        }
+      }
+    }
+  }
+}

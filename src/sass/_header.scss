@@ -1,0 +1,351 @@
+.global-header {
+  position: relative;
+}
+
+.global-header button {
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 1.1733;
+  border-radius: 100px;
+  border: none;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.global-header button:not(:disabled):hover {
+  opacity: 0.95;
+  transform: scale(1.07);
+}
+
+.global-header button:not(:disabled):active {
+  opacity: 0.8;
+  transform: scale(1.09);
+}
+
+.global-header .left-navigation {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 8px;
+}
+
+.left-navigation .buttons-left {
+  display: flex;
+  gap: 4px;
+}
+
+.buttons-left button {
+  color: rgba(0, 0, 0, 1);
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.buttons-left button:disabled {
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(0, 0, 0, 1);
+  cursor: not-allowed;
+}
+
+.buttons-left .home-btn {
+  padding: 10px 26px;
+}
+
+.buttons-left .library-btn {
+  padding: 10px 22px;
+}
+
+.left-navigation .search-form {
+  position: relative;
+}
+
+.left-navigation .search-form.isHidden {
+  display: none;
+}
+
+.search-form .search-input {
+  padding: 10px 45px 10px 14px;
+  border-radius: 100px;
+  background-color: #fff;
+  color: rgba(0, 0, 0, 1);
+  line-height: 1.1733;
+  position: relative;
+  border: none;
+  outline: none;
+  width: 100%;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    outline 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 350ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.search-form.isHidden {
+  display: none;
+}
+
+.search-form .search-input:hover {
+  transform: scale(1.03);
+}
+
+.search-form .search-input:focus {
+  outline: 0.5px solid #fff;
+  background-color: #dc4a47;
+  color: #fff;
+}
+
+.search-form .search-input:focus::placeholder {
+  color: #fff;
+}
+
+.search-input:focus ~ .submit-btn svg {
+  stroke: #fff;
+}
+
+.search-input::placeholder {
+  font-weight: 400;
+}
+
+.submit-btn {
+  width: 14px;
+  height: 14px;
+  background-color: transparent;
+  position: absolute;
+  top: 12px;
+  right: 14px;
+}
+
+.submit-btn svg {
+  width: 14px;
+  height: 14px;
+  stroke: rgba(0, 0, 0, 1);
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 127px;
+}
+
+.logo a {
+  display: flex;
+  gap: 6px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    outline 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 350ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logo a:hover {
+  transform: scale(1.09);
+}
+
+.logo a:active {
+  outline: 0.5px solid #fff;
+  background-color: #b92f2c;
+  color: #fff;
+}
+
+.logo .logo-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.logo-text {
+  font-size: 32px;
+  line-height: 1.171;
+  color: #fff;
+}
+
+.global-header .buttons-right {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 16px;
+}
+
+.global-header .buttons-right.isHidden {
+  display: none;
+}
+
+.global-header .buttons-right button {
+  background-color: rgba(255, 255, 255, 1);
+  color: rgba(185, 47, 44, 1);
+}
+
+.buttons-right button:disabled {
+  background-color: #b92f2c;
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 7px 0px rgba(27, 27, 27, 0.15);
+  cursor: not-allowed;
+}
+
+.buttons-right .watched-tab-btn {
+  padding: 10px 23px;
+}
+
+.buttons-right .queue-tab-btn {
+  padding: 10px 24px;
+}
+
+p.search-error {
+  position: absolute;
+  top: 102;
+  left: 22;
+
+  width: 208px;
+  font-size: 12px;
+  font-style: italic;
+  color: #ffffff;
+}
+
+p.search-error.isHidden {
+  display: none;
+}
+
+p.error-from-local {
+  font-size: 15px;
+  font-style: italic;
+  margin-left: 5px;
+}
+
+p.error-from-local.isHidden {
+  display: none;
+}
+
+/* TABLET */
+@media screen and (min-width: 768px) {
+  .global-header .left-navigation {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .search-form .search-input {
+    padding: 11px 45px 11px 16px;
+  }
+
+  .buttons-left .home-btn {
+    padding: 12px 24px;
+  }
+
+  .buttons-left .library-btn {
+    padding: 12px 20px;
+  }
+
+  .global-header .buttons-right {
+    gap: 5px;
+    position: absolute;
+    top: 16px;
+    right: 32px;
+    margin-top: 0;
+  }
+
+  .buttons-right .watched-tab-btn {
+    padding: 12px 23px;
+  }
+
+  .buttons-right .queue-tab-btn {
+    padding: 12px 24px;
+  }
+
+  button[type='submit'] svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .logo {
+    margin: 0;
+    justify-content: flex-start;
+    position: absolute;
+    left: 8px;
+    bottom: 6px;
+  }
+
+  .logo .logo-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .logo-text {
+    font-size: 40px;
+  }
+
+  p.search-error {
+    top: 63px;
+    left: 25px;
+  }
+
+  p.error-from-local {
+    font-size: 20px;
+  }
+}
+
+/* DESKTOP VERSION*/
+@media screen and (min-width: 1280px) {
+  .search-form .search-input {
+    padding: 13px 65px 13px 20px;
+    transition: margin-right 500ms cubic-bezier(0.4, 0, 0.2, 1),
+      font-size 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .search-form .search-input:focus {
+    margin-right: 55px;
+    font-size: 20px;
+  }
+
+  .submit-btn {
+    right: 20px;
+  }
+
+  .submit-btn svg {
+    transition: width 2500ms cubic-bezier(0.4, 0, 0.2, 1),
+      height 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .search-form .search-input:hover ~ .submit-btn svg,
+  .search-form .search-input:focus ~ .submit-btn svg {
+    width: 25;
+    height: 25px;
+  }
+
+  .buttons-left .home-btn {
+    padding: 14px 32px;
+  }
+
+  .buttons-left .library-btn {
+    padding: 14px 24px;
+  }
+
+  .buttons-right .watched-tab-btn {
+    padding: 14px 32px;
+  }
+
+  .buttons-right .queue-tab-btn {
+    padding: 14px 24px;
+  }
+
+  .logo {
+    bottom: 12px;
+    left: 16px;
+  }
+
+  .logo .logo-icon {
+    width: 59px;
+    height: 59px;
+  }
+
+  .logo .logo-text {
+    font-size: 64px;
+  }
+
+  .logo a {
+    gap: 15px;
+  }
+
+  p.search-error {
+    top: 73px;
+    left: 40px;
+    font-size: 13px;
+  }
+
+  p.error-from-local {
+    font-size: 25px;
+  }
+}

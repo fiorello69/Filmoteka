@@ -1,0 +1,325 @@
+.modal-window {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 80px 0 136px 0;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.6s ease, visibility 0.5s ease;
+}
+
+.modal-window.isHidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal-content {
+  width: 280px;
+  height: fit-content;
+  background: #fff;
+  padding: 48px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #000000;
+  position: relative;
+  transform: scale(1);
+  transition: transform 0.7s ease;
+}
+
+.modal-window.isHidden .modal-content {
+  transform: scale(0);
+}
+
+.modal-content .close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+}
+
+.modal-content .close-button svg {
+  stroke: rgba(0, 0, 0, 1);
+}
+
+.modal-content .close-button svg:hover {
+  scale: 1.1;
+  stroke: #b92f2c;
+  background-color: rgb(198, 198, 198);
+  border-radius: 100%;
+}
+
+.modal-content .close-button svg:active {
+  scale: 1.15;
+  opacity: 0.7;
+}
+
+.modal-content .movie-image img {
+  width: 240px;
+  height: 357px;
+  border-radius: 5px;
+}
+
+.modal-content .movie-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  line-height: 1.333;
+  font-size: 12px;
+}
+
+.movie-info .movie-title {
+  font-size: 20px;
+  line-height: 1.172;
+  text-transform: uppercase;
+}
+
+.movie-info .movie-characteristics {
+  display: grid;
+  column-gap: 36px;
+  row-gap: 8px;
+  grid-template-columns: 69px 1fr;
+}
+
+.movie-characteristics span:nth-of-type(2n + 1) {
+  color: #8c8c8c;
+}
+
+.movie-characteristics span .movie-score {
+  background-color: #b92f2c;
+  border-radius: 5px;
+  color: #ffffff;
+  padding: 1px 10px;
+}
+
+.movie-rating-divider {
+  color: #8c8c8c;
+  margin-right: 3px;
+}
+
+.movie-characteristics span .movie-votes {
+  border-radius: 5px;
+  background: #f7f7f7;
+  padding: 1px 4px;
+  color: #000;
+}
+
+.original-title {
+  text-transform: uppercase;
+}
+
+.about-movie {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.about-movie p {
+  line-height: 1.666;
+}
+
+.buttons-wrapper {
+  position: relative;
+}
+
+.buttons-wrapper.isHidden {
+  display: none;
+}
+
+.buttons-wrapper button,
+.remove-btn {
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 1.171;
+}
+
+.buttons-wrapper .add-to-watched,
+.remove-btn {
+  color: #ffffff;
+  border-radius: 100px;
+  background: #b92f2c;
+  box-shadow: 0px 0px 7px 0px rgba(27, 27, 27, 0.15);
+  padding: 10px 11px;
+  border: none;
+  margin-right: 3px;
+}
+
+.buttons-wrapper .add-to-queue {
+  padding: 10px 13px;
+  color: #b92f2c;
+  border-radius: 100px;
+  border: 1px solid #000;
+  background: #fff;
+}
+
+.buttons-wrapper button:not(:disabled):hover,
+.remove-btn:hover {
+  opacity: 0.9;
+  scale: 1.07;
+}
+
+.buttons-wrapper button:not(:disabled):active,
+.remove-btn:active {
+  opacity: 0.5;
+  scale: 1.09;
+}
+
+.remove-btn {
+  margin: 0 auto;
+  padding: 10px 11px;
+  margin-top: 10px;
+}
+
+.remove-btn.isHidden {
+  display: none;
+}
+
+.buttons-wrapper button:disabled {
+  cursor: not-allowed;
+  background-color: #b7b4b4;
+}
+
+.buttons-wrapper .add-to-queue:disabled {
+  color: #fff;
+  border: none;
+}
+
+p.watched-not-awaible,
+p.queue-not-awaible {
+  color: red;
+  width: 115px;
+  position: absolute;
+  bottom: -43px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.2s, opacity 0.2s ease-in-out;
+}
+
+.add-to-queue:disabled:hover ~ .queue-not-awaible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.add-to-watched:disabled:hover ~ .watched-not-awaible {
+  visibility: visible;
+  opacity: 1;
+}
+
+p.watched-not-awaible {
+  right: 120px;
+}
+
+p.queue-not-awaible {
+  right: -3px;
+}
+
+/* TABLET */
+@media screen and (min-width: 768px) {
+  .modal-window {
+    padding: 250px 0 244px 0;
+    align-items: center;
+  }
+
+  .modal-content {
+    width: 705px;
+    padding: 40px 72px 64px 36px;
+    flex-direction: row;
+    gap: 68px;
+  }
+
+  .modal-content .movie-image img {
+    width: 264px;
+    height: 373.551px;
+    border-radius: 5px;
+  }
+
+  .buttons-wrapper .add-to-watched {
+    margin-right: 6px;
+  }
+
+  .buttons-wrapper .add-to-queue,
+  .buttons-wrapper .add-to-watched {
+    padding: 12px 17px;
+  }
+
+  p.watched-not-awaible {
+    bottom: -50px;
+    right: 141px;
+  }
+
+  p.queue-not-awaible {
+    bottom: -50px;
+    right: 3px;
+  }
+
+  .remove-btn {
+    padding: 13px 14px;
+    font-size: 13px;
+  }
+}
+
+/* DESKTOP VERSION*/
+@media screen and (min-width: 1280px) {
+  .modal-window {
+    padding: 250px 0px 238px 0px;
+  }
+
+  .modal-content {
+    padding: 40px 12px;
+    gap: 16px;
+    width: 806px;
+  }
+
+  .modal-content .movie-image img {
+    width: 375px;
+    height: 478px;
+  }
+
+  .movie-info .movie-title {
+    font-size: 30px;
+  }
+
+  .movie-info .movie-characteristics {
+    column-gap: 83px;
+  }
+
+  .buttons-wrapper .add-to-watched {
+    padding: 14px 32px;
+  }
+
+  .buttons-wrapper .add-to-queue {
+    padding: 14px 24px;
+  }
+
+  p.watched-not-awaible,
+  p.queue-not-awaible {
+    font-size: 14px;
+    width: 145px;
+    bottom: -60px;
+  }
+
+  p.watched-not-awaible {
+    right: 230px;
+  }
+
+  p.queue-not-awaible {
+    right: 70px;
+  }
+
+  .remove-btn {
+    padding: 14px 15px;
+    margin-top: 20px;
+  }
+}

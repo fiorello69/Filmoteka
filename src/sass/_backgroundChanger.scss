@@ -1,0 +1,115 @@
+.global-header {
+  height: fit-content;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: backgroundChanger 20s ease-in-out infinite;
+}
+
+@keyframes backgroundChanger {
+  0%,
+  100% {
+    background-image: url('../images/backgrounds/header-bg-m-1x-red.jpg');
+  }
+  33% {
+    background-image: url('../images/backgrounds/header-bg-m-1x-yellow.jpg');
+  }
+  66% {
+    background-image: url('../images/backgrounds/header-bg-m-1x-orange.jpg');
+  }
+}
+
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  @keyframes backgroundChanger {
+    0%,
+    100% {
+      background-image: url('../images/backgrounds/header-bg-m-2x-red.jpg');
+    }
+    33% {
+      background-image: url('../images/backgrounds/header-bg-m-2x-yellow.jpg');
+    }
+    66% {
+      background-image: url('../images/backgrounds/header-bg-m-2x-orange.jpg');
+    }
+  }
+}
+
+// /* TABLET */
+@media screen and (min-width: 768px) {
+  .global-header {
+    height: 222px;
+    border-radius: 15px;
+  }
+
+  @keyframes backgroundChanger {
+    0%,
+    100% {
+      background-image: url('../images/backgrounds/header-bg-t-1x-red.jpg');
+    }
+    33% {
+      background-image: url('../images/backgrounds/header-bg-t-1x-yellow.jpg');
+    }
+    66% {
+      background-image: url('../images/backgrounds/header-bg-t-1x-orange.jpg');
+    }
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    @keyframes backgroundChanger {
+      0%,
+      100% {
+        background-image: url('../images/backgrounds/header-bg-t-2x-red.jpg');
+      }
+      33% {
+        background-image: url('../images/backgrounds/header-bg-t-2x-yellow.jpg');
+      }
+      66% {
+        background-image: url('../images/backgrounds/header-bg-t-2x-orange.jpg');
+      }
+    }
+  }
+}
+
+// /* DESKTOP VERSION*/
+@media screen and (min-width: 1280px) {
+  .global-header {
+    height: 316px;
+  }
+
+  @keyframes backgroundChanger {
+    0%,
+    100% {
+      background-image: url('../images/backgrounds/header-bg-d-1x-red.jpg');
+    }
+    33% {
+      background-image: url('../images/backgrounds/header-bg-d-1x-yellow.jpg');
+    }
+    66% {
+      background-image: url('../images/backgrounds/header-bg-d-1x-orange.jpg');
+    }
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    @keyframes backgroundChanger {
+      0%,
+      100% {
+        background-image: url('../images/backgrounds/header-bg-d-2x-red.jpg');
+      }
+      33% {
+        background-image: url('../images/backgrounds/header-bg-d-2x-yellow.jpg');
+      }
+      66% {
+        background-image: url('../images/backgrounds/header-bg-d-2x-orange.jpg');
+      }
+    }
+  }
+}

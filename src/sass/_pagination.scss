@@ -1,0 +1,124 @@
+div.tui-pagination {
+  height: 28px;
+  margin-top: 49px;
+  margin-bottom: 8px;
+  line-height: normal;
+  text-align: center;
+  font-size: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+}
+
+div.tui-pagination.isHidden {
+  display: none;
+}
+
+div.tui-pagination .tui-page-btn:not(.tui-is-selected):hover {
+  background-color: #b7b4b4;
+  scale: 1.025;
+  opacity: 0.8;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.tui-pagination .tui-page-btn:not(.tui-is-selected):active {
+  opacity: 0.6;
+}
+
+div.tui-pagination .tui-page-btn:not(.tui-is-selected):active {
+  opacity: 0.6;
+}
+
+div.tui-pagination .tui-page-btn.tui-prev:active,
+div.tui-pagination .tui-page-btn.tui-next:active {
+  opacity: 0.6;
+  background-color: #b92f2c;
+}
+
+div.tui-pagination .tui-prev {
+  margin-right: 5px;
+}
+
+div.tui-pagination .tui-next {
+  margin-left: 5px;
+}
+
+div.tui-pagination .tui-ico-ellip {
+  width: 10px;
+  height: 2px;
+  background-position: 0px -24px;
+  vertical-align: middle;
+  margin-top: 0;
+}
+
+div.tui-pagination .tui-is-disabled {
+  display: none;
+}
+
+div.tui-pagination .tui-first,
+div.tui-pagination .tui-last {
+  display: none;
+}
+
+div.tui-pagination .tui-page-btn {
+  color: #000000;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.333;
+  border: none;
+}
+
+div.tui-pagination .tui-prev,
+div.tui-pagination .tui-next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  background: #f7f7f7;
+  border: none;
+}
+
+div.tui-pagination .tui-is-selected,
+div.tui-pagination strong {
+  color: #fff;
+  cursor: default;
+  border-radius: 5px;
+  background: #b92f2c;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.333px;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.tui-pagination .tui-next-is-ellip,
+div.tui-pagination .tui-prev-is-ellip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.tui-pagination .tui-page-btn.tui-is-disabled {
+  display: none;
+}
+
+div.tui-pagination .tui-first-child.tui-is-selected {
+  border: none;
+}
+
+div.tui-pagination .tui-is-selected:hover {
+  background-color: #b92f2c;
+}
